@@ -886,9 +886,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3059aa2b06571446a859dcc984ef8ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
-  m_EditorClassIdentifier: 
+  power: 12
   minAngleLeftX: 0
   maxAngleRightX: 90
   ballEmiter: {fileID: 615678767}
