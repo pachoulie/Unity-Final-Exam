@@ -12,7 +12,7 @@ GameObject:
   - 23: {fileID: 2300000}
   - 95: {fileID: 9500000}
   m_Layer: 0
-  m_Name: Crystal
+  m_Name: Block
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24,9 +24,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_LocalRotation: {x: 1, y: 0, z: -0, w: 2.18556941e-08}
-  m_LocalPosition: {x: 4.36549377, y: -8.03160095, z: 11.6825619}
-  m_LocalScale: {x: 5.27684546, y: 5.27684546, z: 5.27684546}
+  m_LocalRotation: {x: -.707106829, y: 0, z: -0, w: .707106829}
+  m_LocalPosition: {x: 1.56543684, y: -10.2138138, z: -3.80290461}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
 --- !u!23 &2300000
@@ -41,7 +41,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 2a1767a7ce696984f858c522267dc53b, type: 2}
+  - {fileID: 2100000, guid: c42e93319ed85294ba42bb1fa36d9c41, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -53,7 +53,7 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_Mesh: {fileID: 4300000, guid: ab0c74096fb45bf4596d1806d3d3eba7, type: 3}
+  m_Mesh: {fileID: 4300000, guid: b593bb6b8a08fe54aa42c3a82d9ca8d1, type: 3}
 --- !u!95 &9500000
 Animator:
   m_ObjectHideFlags: 1
@@ -61,7 +61,7 @@ Animator:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: ab0c74096fb45bf4596d1806d3d3eba7, type: 3}
+  m_Avatar: {fileID: 9000000, guid: b593bb6b8a08fe54aa42c3a82d9ca8d1, type: 3}
   m_Controller: {fileID: 0}
   m_CullingMode: 1
   m_ApplyRootMotion: 1
