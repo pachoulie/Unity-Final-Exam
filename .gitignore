@@ -4,5 +4,5 @@
 *.csproj
 *.unityproj
 *.sln
-/*.userprefs
 /*.pidb
+/*.userprefs
