@@ -1,11 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Canon : MonoBehaviour {
 	
 	public float power;
 	public float minAngleLeftX;
 	public float maxAngleRightX;
+	public int maximum_balls;
+
 	public GameObject ballEmiter;
 	public GameObject ball;
 	public GameObject canonBody;
@@ -14,7 +17,8 @@ public class Canon : MonoBehaviour {
 	
 	public float angleX;
 	
-	GameObject nextBall;
+	public List<GameObject> ballList;
+	
 	bool fire;
 	
 	// Use this for initialization
@@ -29,11 +33,19 @@ public class Canon : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (fire && !canonBody.animation.isPlaying && !left.animation.isPlaying && !right.animation.isPlaying) {
-			nextBall = (GameObject) Instantiate(ball, ballEmiter.transform.position, Quaternion.identity);
+			GameObject nextBall = (GameObject) Instantiate(ball, ballEmiter.transform.position, Quaternion.identity);
 			Vector3 dir = ballEmiter.transform.position - canonBody.transform.position;
 			dir *= power;
 			nextBall.rigidbody.AddForce(dir, ForceMode.Impulse);
 			fire = false;
+			ballList.Add(nextBall);
+			if (ballList.Count > maximum_balls)
+			{
+				ballList[0].transform.position = Vector3.up * 100;
+				GameObject ballToRemove = ballList[0];
+				ballList.RemoveAt(0);
+				Destroy(ballToRemove, 1);
+			}
 		}
 		if (Input.GetKey(KeyCode.RightArrow)) {
 			if ( angleX < maxAngleRightX ) {

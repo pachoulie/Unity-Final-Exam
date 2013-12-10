@@ -14,6 +14,8 @@ public class Door : MonoBehaviour, ITriggered {
 	}
 	
 	public void OnTriggeredEnter () {
+		animation["test_ouverture_porte_trigger_level1"].time = 0;
+		animation["test_ouverture_porte_trigger_level1"].speed = 1;
 		animation.Play("test_ouverture_porte_trigger_level1");
 	}
 	
@@ -21,6 +23,8 @@ public class Door : MonoBehaviour, ITriggered {
 	}
 	
 	public void OnTriggeredExit () {
-		animation.Play("test_ouverture_porte_trigger_level1_revert");
+		animation["test_ouverture_porte_trigger_level1"].time = animation["test_ouverture_porte_trigger_level1"].length;
+		animation["test_ouverture_porte_trigger_level1"].speed = -1;
+		animation.Play("test_ouverture_porte_trigger_level1");
 	}
 }
