@@ -3,11 +3,11 @@ using System.Collections;
 
 public class Slab : MonoBehaviour {
 	
-	//public ITriggered trigger;
+	public GameObject trigger;
 	
 	// Use this for initialization
 	void Start () {
-	
+		//trigger = (ITriggered) objectToTrigger;
 	}
 	
 	// Update is called once per frame
@@ -16,14 +16,14 @@ public class Slab : MonoBehaviour {
 	}
 	
 	void OnTriggerEnter (Collider collider) {
-		//trigger.OnSlabEnter();
+		trigger.SendMessage("OnTriggeredEnter");
 	}
 
 	void OnTriggerExit (Collider collider) {
-		//trigger.OnSlabExit();
+		trigger.SendMessage("OnTriggeredExit");
 	}
 	
 	void OnTriggerStay (Collider collider) {
-		//trigger.OnSlabStay();
+		trigger.SendMessage("OnTriggeredStay");
 	}
 }
