@@ -9,9 +9,13 @@ public class Canon : MonoBehaviour {
 	public GameObject ballEmiter;
 	public GameObject ball;
 	public GameObject canonBody;
+	public GameObject left;
+	public GameObject right;
+	
 	public float angleX;
 	
 	GameObject nextBall;
+	bool fire;
 	
 	// Use this for initialization
 	void Start () {
@@ -19,10 +23,18 @@ public class Canon : MonoBehaviour {
        	rot.eulerAngles = transform.eulerAngles;
        	canonBody.transform.rotation=rot;
 		canonBody.transform.RotateAround(canonBody.transform.position, new Vector3(1, 0, 0), angleX);
+		fire = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		if (fire && !canonBody.animation.isPlaying && !left.animation.isPlaying && !right.animation.isPlaying) {
+			nextBall = (GameObject) Instantiate(ball, ballEmiter.transform.position, Quaternion.identity);
+			Vector3 dir = ballEmiter.transform.position - canonBody.transform.position;
+			dir *= power;
+			nextBall.rigidbody.AddForce(dir, ForceMode.Impulse);
+			fire = false;
+		}
 		if (Input.GetKey(KeyCode.RightArrow)) {
 			if ( angleX < maxAngleRightX ) {
 				canonBody.transform.RotateAround(canonBody.transform.position, new Vector3(1, 0, 0), 1f);
@@ -36,10 +48,10 @@ public class Canon : MonoBehaviour {
 			}
 		}
 		if (Input.GetKeyDown(KeyCode.Space)) {
-			nextBall = (GameObject) Instantiate(ball, ballEmiter.transform.position, Quaternion.identity);
-			Vector3 dir = ballEmiter.transform.position - canonBody.transform.position;
-			dir *= power;
-			nextBall.rigidbody.AddForce(dir, ForceMode.Impulse);
+			fire = true;	
+			canonBody.animation.Play();
+			left.animation.Play();
+			right.animation.Play();
 		}
 	}
 }

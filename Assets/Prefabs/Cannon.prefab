@@ -186,7 +186,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100008}
   m_LocalRotation: {x: 0, y: .707106829, z: 0, w: .707106829}
-  m_LocalPosition: {x: -4.34241152, y: 11.3987789, z: -14.2950821}
+  m_LocalPosition: {x: .353439689, y: -9.59701252, z: -11.4647026}
   m_LocalScale: {x: .482067317, y: .482067317, z: .482067317}
   m_Children:
   - {fileID: 400010}
@@ -379,12 +379,9 @@ Animation:
   serializedVersion: 3
   m_Animation: {fileID: 7400000, guid: 419dc3dc8dda67147b6d1ee80e5dda87, type: 2}
   m_Animations:
-  - {fileID: 7400000, guid: 9f99d6566804f6c4f8a0f940e9318fc7, type: 2}
-  - {fileID: 7400000, guid: cf61d918de4d0144f9ef7e8a5d07ae8c, type: 2}
-  - {fileID: 7400000, guid: 95a0b9cdebc7e9f4abf465e8fe66aa8f, type: 2}
   - {fileID: 7400000, guid: 419dc3dc8dda67147b6d1ee80e5dda87, type: 2}
   m_WrapMode: 0
-  m_PlayAutomatically: 1
+  m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
   m_UserAABB:
@@ -400,13 +397,9 @@ Animation:
   serializedVersion: 3
   m_Animation: {fileID: 7400000, guid: 95a0b9cdebc7e9f4abf465e8fe66aa8f, type: 2}
   m_Animations:
-  - {fileID: 7400000, guid: 94c45c4d00de66348b8dbc7a17e1f147, type: 2}
-  - {fileID: 7400000, guid: cf61d918de4d0144f9ef7e8a5d07ae8c, type: 2}
-  - {fileID: 7400000, guid: 9f99d6566804f6c4f8a0f940e9318fc7, type: 2}
-  - {fileID: 7400000, guid: 419dc3dc8dda67147b6d1ee80e5dda87, type: 2}
   - {fileID: 7400000, guid: 95a0b9cdebc7e9f4abf465e8fe66aa8f, type: 2}
   m_WrapMode: 0
-  m_PlayAutomatically: 1
+  m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
   m_UserAABB:
@@ -422,13 +415,9 @@ Animation:
   serializedVersion: 3
   m_Animation: {fileID: 7400000, guid: ef344d4969b38b64f9747f4180b1540f, type: 2}
   m_Animations:
-  - {fileID: 7400000, guid: 9f99d6566804f6c4f8a0f940e9318fc7, type: 2}
-  - {fileID: 7400000, guid: 8f66ac27e158a054085da3d114b5aa77, type: 2}
-  - {fileID: 7400000, guid: 94c45c4d00de66348b8dbc7a17e1f147, type: 2}
-  - {fileID: 7400000, guid: 1fd4dc50c0083d44cbb1e9075c87025b, type: 2}
   - {fileID: 7400000, guid: ef344d4969b38b64f9747f4180b1540f, type: 2}
   m_WrapMode: 0
-  m_PlayAutomatically: 1
+  m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
   m_UserAABB:
@@ -451,6 +440,8 @@ MonoBehaviour:
   ballEmiter: {fileID: 100000}
   ball: {fileID: 100000, guid: d2c26a59206ea6d4aad948a44c36061b, type: 2}
   canonBody: {fileID: 100014}
+  left: {fileID: 100012}
+  right: {fileID: 100004}
   angleX: 0
 --- !u!1001 &100100000
 Prefab:
