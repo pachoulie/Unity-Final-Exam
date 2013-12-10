@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Slab : MonoBehaviour {
 	
-	public ITriggered trigger;
+	//public ITriggered trigger;
 	
 	// Use this for initialization
 	void Start () {
@@ -16,14 +16,14 @@ public class Slab : MonoBehaviour {
 	}
 	
 	void OnTriggerEnter (Collider collider) {
-		trigger.OnSlabEnter();
+		//trigger.OnSlabEnter();
 	}
 
 	void OnTriggerExit (Collider collider) {
-		trigger.OnSlabExit();
+		//trigger.OnSlabExit();
 	}
 	
 	void OnTriggerStay (Collider collider) {
-		trigger.OnSlabStay();
+		//trigger.OnSlabStay();
 	}
 }
