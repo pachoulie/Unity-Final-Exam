@@ -14,16 +14,19 @@ public class Door : MonoBehaviour, ITriggered {
 	}
 	
 	public void OnTriggeredEnter () {
-		animation["test_ouverture_porte_trigger_level1"].time = 0;
+		Debug.Log ("Enter !");
+		//animation["test_ouverture_porte_trigger_level1"].time = 0;
 		animation["test_ouverture_porte_trigger_level1"].speed = 1;
 		animation.Play("test_ouverture_porte_trigger_level1");
 	}
 	
 	public void OnTriggeredStay () {
+		Debug.Log ("Stay !");
 	}
 	
 	public void OnTriggeredExit () {
-		animation["test_ouverture_porte_trigger_level1"].time = animation["test_ouverture_porte_trigger_level1"].length;
+		Debug.Log ("Exit !");
+		//animation["test_ouverture_porte_trigger_level1"].time = animation["test_ouverture_porte_trigger_level1"].length;
 		animation["test_ouverture_porte_trigger_level1"].speed = -1;
 		animation.Play("test_ouverture_porte_trigger_level1");
 	}
