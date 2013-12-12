@@ -26,7 +26,8 @@ public class Door : MonoBehaviour, ITriggered {
 	
 	public void OnTriggeredExit () {
 		Debug.Log ("Exit !");
-		//animation["test_ouverture_porte_trigger_level1"].time = animation["test_ouverture_porte_trigger_level1"].length;
+		if (!animation.isPlaying)
+			animation["test_ouverture_porte_trigger_level1"].time = animation["test_ouverture_porte_trigger_level1"].length;
 		animation["test_ouverture_porte_trigger_level1"].speed = -1;
 		animation.Play("test_ouverture_porte_trigger_level1");
 	}
