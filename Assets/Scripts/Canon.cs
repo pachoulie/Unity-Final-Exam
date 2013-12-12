@@ -53,7 +53,8 @@ public class Canon : MonoBehaviour {
 				cmp -= 360;
 			}
 			if ( cmp < maxAngleRightX ) {
-				incAngle += 0.1f;
+				if (incAngle <= 3)
+					incAngle += 0.1f;
 				canonBody.transform.RotateAround(canonBody.transform.position, new Vector3(1, 0, 0), incAngle);
 			}
 		} else if (Input.GetKey(KeyCode.LeftArrow)) {
@@ -61,10 +62,10 @@ public class Canon : MonoBehaviour {
 			if (cmp <= 0.1) {
 				cmp += 360;
 			}
-			Debug.Log (cmp + " ?= " + minAngleLeftX);
 			if ( cmp > minAngleLeftX ) {
+				if (incAngle <= 3)
+					incAngle += 0.1f;
 				canonBody.transform.RotateAround(canonBody.transform.position, new Vector3(1, 0, 0), -incAngle);
-				incAngle += 0.1f;
 			}
 		} else {
 			incAngle = 0;
