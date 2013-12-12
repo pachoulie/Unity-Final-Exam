@@ -5,8 +5,8 @@ using System.Collections.Generic;
 public class Canon : MonoBehaviour {
 	
 	public float power;
-	public float minAngleLeftX;
-	public float maxAngleRightX;
+	public int minAngleLeftX;
+	public int maxAngleRightX;
 	public int maximum_balls;
 
 	public GameObject ballEmiter;
@@ -21,14 +21,12 @@ public class Canon : MonoBehaviour {
 	public List<GameObject> ballList;
 	
 	bool fire;
+	float incAngle;
 	
 	// Use this for initialization
 	void Start () {
-		Quaternion rot=new Quaternion();
-       	rot.eulerAngles = transform.eulerAngles;
-       	canonBody.transform.rotation=rot;
-		canonBody.transform.RotateAround(canonBody.transform.position, new Vector3(1, 0, 0), angleX);
 		fire = false;
+		incAngle = 0;
 	}
 	
 	// Update is called once per frame
@@ -48,17 +46,28 @@ public class Canon : MonoBehaviour {
 				Destroy(ballToRemove, 1);
 			}
 		}
+		angleX = canonBody.transform.localEulerAngles.z;
 		if (Input.GetKey(KeyCode.RightArrow)) {
-			if ( angleX < maxAngleRightX ) {
-				canonBody.transform.RotateAround(canonBody.transform.position, new Vector3(1, 0, 0), 1f);
-				angleX++;
+			float cmp = angleX + incAngle;
+			if (cmp > 180) {
+				cmp -= 360;
 			}
-		}
-		if (Input.GetKey(KeyCode.LeftArrow)) {
-			if ( angleX > minAngleLeftX ) {
-				canonBody.transform.RotateAround(canonBody.transform.position, new Vector3(1, 0, 0), -1f);
-				angleX--;
+			if ( cmp < maxAngleRightX ) {
+				incAngle += 0.1f;
+				canonBody.transform.RotateAround(canonBody.transform.position, new Vector3(1, 0, 0), incAngle);
 			}
+		} else if (Input.GetKey(KeyCode.LeftArrow)) {
+			float cmp = angleX - incAngle;
+			if (cmp <= 0.1) {
+				cmp += 360;
+			}
+			Debug.Log (cmp + " ?= " + minAngleLeftX);
+			if ( cmp > minAngleLeftX ) {
+				canonBody.transform.RotateAround(canonBody.transform.position, new Vector3(1, 0, 0), -incAngle);
+				incAngle += 0.1f;
+			}
+		} else {
+			incAngle = 0;
 		}
 		if (Input.GetKeyDown(KeyCode.Space)) {
 			fire = true;
