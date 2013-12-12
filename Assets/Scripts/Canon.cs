@@ -14,7 +14,7 @@ public class Canon : MonoBehaviour {
 	public GameObject canonBody;
 	public GameObject left;
 	public GameObject right;
-	public GameObject prefab;
+	public GameObject smoke;
 	
 	public float angleX;
 	
@@ -42,7 +42,7 @@ public class Canon : MonoBehaviour {
 			ballList.Add(nextBall);
 			if (ballList.Count > maximum_balls)
 			{
-				ballList[0].transform.position = Vector3.up * 100;
+				ballList[0].transform.position = Vector3.down * 100;
 				GameObject ballToRemove = ballList[0];
 				ballList.RemoveAt(0);
 				Destroy(ballToRemove, 1);
@@ -61,11 +61,11 @@ public class Canon : MonoBehaviour {
 			}
 		}
 		if (Input.GetKeyDown(KeyCode.Space)) {
-			fire = true;	
+			fire = true;
 			canonBody.animation.Play();
 			left.animation.Play();
 			right.animation.Play();
-			Instantiate(prefab, ballEmiter.transform.position, Quaternion.identity);
+			Instantiate(smoke, ballEmiter.transform.position, Quaternion.identity);
 		}
 	}
 }
