@@ -23,7 +23,7 @@ public class World : MonoBehaviour, ITriggered {
 	}
 	
 	public void OnTriggeredStay () {
-		Debug.Log ("Stay !");
+		//Debug.Log ("Stay !");
 	}
 	
 	public void OnTriggeredExit () {

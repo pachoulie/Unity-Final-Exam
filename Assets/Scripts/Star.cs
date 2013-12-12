@@ -5,7 +5,7 @@ public class Star : MonoBehaviour {
 	
 	public string SceneName;
 	bool gameFinished;
-	bool enterPressed;
+
 	// Use this for initialization
 	void Start () {
 		gameFinished = false;
@@ -17,7 +17,6 @@ public class Star : MonoBehaviour {
 
 		if (gameFinished == true){
 			if (Input.GetKey(KeyCode.KeypadEnter) || Input.GetKey(KeyCode.Return)) {
-				enterPressed = true;
 				if (!plane.animation.isPlaying)
 					plane.animation["Level_Cleard_Animation"].time =
 						plane.animation["Level_Cleard_Animation"].length;
