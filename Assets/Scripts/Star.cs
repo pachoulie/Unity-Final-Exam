@@ -15,7 +15,7 @@ public class Star : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (gameFinished == true){
-			if (Input.GetKey(KeyCode.KeypadEnter) || Input.GetKey ("enter"))
+			if (Input.GetKey(KeyCode.KeypadEnter) || Input.GetKey(KeyCode.Return))
 				Application.LoadLevel (SceneName);
 		}
 	}
