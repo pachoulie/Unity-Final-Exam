@@ -5207,6 +5207,7 @@ MonoBehaviour:
   canonBody: {fileID: 609367092}
   left: {fileID: 107300994}
   right: {fileID: 538263806}
+  prefab: {fileID: 100000, guid: 3cbb5178571ab6f488a9f380316a308a, type: 2}
   angleX: 0
   ballList: []
 --- !u!1001 &565904858
@@ -12311,6 +12312,7 @@ GameObject:
   - 95: {fileID: 1201999532}
   - 111: {fileID: 1201999531}
   - 114: {fileID: 1201999535}
+  - 135: {fileID: 1201999536}
   m_Layer: 0
   m_Name: Star
   m_TagString: Untagged
@@ -12325,7 +12327,7 @@ Transform:
   m_PrefabInternal: {fileID: 1638639086}
   m_GameObject: {fileID: 1201999529}
   m_LocalRotation: {x: -.737926602, y: -.637490153, z: .0686822683, w: .210602641}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: .487588167, y: 0, z: 0}
   m_LocalScale: {x: .62517333, y: .62517333, z: .62517333}
   m_Children: []
   m_Father: {fileID: 848161690}
@@ -12338,7 +12340,7 @@ Animation:
   m_GameObject: {fileID: 1201999529}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 0}
+  m_Animation: {fileID: 7400000, guid: 293851eb5e2c300479d75cd6a38b6738, type: 2}
   m_Animations:
   - {fileID: 7400000, guid: 293851eb5e2c300479d75cd6a38b6738, type: 2}
   m_WrapMode: 0
@@ -12401,6 +12403,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SceneName: level2
+  gameFinished: 0
+--- !u!135 &1201999536
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 13500000, guid: 8afc9b2715761334c8045b64b59f90ea,
+    type: 2}
+  m_PrefabInternal: {fileID: 1638639086}
+  m_GameObject: {fileID: 1201999529}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.5
+  m_Center: {x: .42377317, y: -.114292242, z: 4.12552881}
 --- !u!1001 &1203753339
 Prefab:
   m_ObjectHideFlags: 0

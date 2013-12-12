@@ -437,12 +437,15 @@ MonoBehaviour:
   power: 20
   minAngleLeftX: -90
   maxAngleRightX: 0
+  maximum_balls: 0
   ballEmiter: {fileID: 100000}
   ball: {fileID: 100000, guid: d2c26a59206ea6d4aad948a44c36061b, type: 2}
   canonBody: {fileID: 100014}
   left: {fileID: 100012}
   right: {fileID: 100004}
+  prefab: {fileID: 100000, guid: 3cbb5178571ab6f488a9f380316a308a, type: 2}
   angleX: 0
+  ballList: []
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

@@ -21,8 +21,14 @@ public class Star : MonoBehaviour {
 	}
 	
 	void OnTriggerEnter() {
+		GameObject	textPivot = GameObject.Find("Text Pivot");
 		GameObject	clearedLevelPlane = GameObject.Find("Plane");
-		clearedLevelPlane.animation.Play();
+		
+		
+		if (clearedLevelPlane != null)
+			clearedLevelPlane.animation.Play();
+		if (textPivot != null)
+			textPivot.SetActive(false);
 		gameFinished = true;
 	}
 }

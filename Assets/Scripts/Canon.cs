@@ -14,6 +14,7 @@ public class Canon : MonoBehaviour {
 	public GameObject canonBody;
 	public GameObject left;
 	public GameObject right;
+	public GameObject prefab;
 	
 	public float angleX;
 	
@@ -64,6 +65,7 @@ public class Canon : MonoBehaviour {
 			canonBody.animation.Play();
 			left.animation.Play();
 			right.animation.Play();
+			Instantiate(prefab, ballEmiter.transform.position, Quaternion.identity);
 		}
 	}
 }
