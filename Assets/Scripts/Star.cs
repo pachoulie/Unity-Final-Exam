@@ -1,22 +1,30 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class Star : MonoBehaviour {
 	
 	public string SceneName;
-	public bool gameFinished;
-	
+	bool gameFinished;
+	bool enterPressed;
 	// Use this for initialization
 	void Start () {
 		gameFinished = false;
-	
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		GameObject	plane = GameObject.Find("Plane");
+
 		if (gameFinished == true){
-			if (Input.GetKey(KeyCode.KeypadEnter) || Input.GetKey(KeyCode.Return))
+			if (Input.GetKey(KeyCode.KeypadEnter) || Input.GetKey(KeyCode.Return)) {
+				enterPressed = true;
+				if (!plane.animation.isPlaying)
+					plane.animation["Level_Cleard_Animation"].time =
+						plane.animation["Level_Cleard_Animation"].length;
+				plane.animation["Level_Cleard_Animation"].speed = -1;
+				plane.animation.Play("Level_Cleard_Animation");
 				Application.LoadLevel (SceneName);
+			}
 		}
 	}
 	
@@ -24,7 +32,7 @@ public class Star : MonoBehaviour {
 		GameObject	textPivot = GameObject.Find("Text Pivot");
 		GameObject	clearedLevelPlane = GameObject.Find("Plane");
 		
-		
+		Debug.Log("Level finished !");
 		if (clearedLevelPlane != null)
 			clearedLevelPlane.animation.Play();
 		if (textPivot != null)
