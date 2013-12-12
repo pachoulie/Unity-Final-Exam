@@ -18,15 +18,16 @@ public class Slab : MonoBehaviour {
 	void OnTriggerEnter (Collider collider) {
 		trigger.SendMessage("OnTriggeredEnter");
 		animation["slab_pressure"].speed = 1;
-		//animation["slab_pressure"].time = 0;
-		animation.Play();
+		animation.Play("slab_pressure");
 	}
 
 	void OnTriggerExit (Collider collider) {
 		trigger.SendMessage("OnTriggeredExit");
 		//animation["slab_pressure"].time = animation["slab_pressure"].length;
+		if (!animation.isPlaying)
+			animation["slab_pressure"].time = animation["slab_pressure"].length;
 		animation["slab_pressure"].speed = -1;
-		animation.Play ();
+		animation.Play ("slab_pressure");
 	}
 	
 	void OnTriggerStay (Collider collider) {
