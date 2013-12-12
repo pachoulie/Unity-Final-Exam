@@ -152,8 +152,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
-  m_LocalRotation: {x: .5, y: .5, z: .5, w: .5}
-  m_LocalPosition: {x: 2.21034431, y: 0, z: -11.8089533}
+  m_LocalRotation: {x: .00344579318, y: .707098424, z: .00344579318, w: .707098424}
+  m_LocalPosition: {x: -.679404795, y: -9.5992403, z: -10.973897}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400010}
@@ -186,7 +186,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100008}
-  m_LocalRotation: {x: -.707106829, y: -4.32978063e-17, z: -4.32978063e-17, w: .707106829}
+  m_LocalRotation: {x: -3.09086232e-08, y: .707106829, z: -.707106829, w: -3.09086232e-08}
   m_LocalPosition: {x: .0455792211, y: 2.93551755, z: .789563894}
   m_LocalScale: {x: -1, y: -1, z: -1}
   m_Children: []
@@ -435,9 +435,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   power: 15
-  minAngleLeftX: -180
+  minAngleLeftX: -90
   maxAngleRightX: 0
-  maximum_balls: 1
+  maximum_balls: 4
   ballEmiter: {fileID: 100000}
   ball: {fileID: 100000, guid: d2c26a59206ea6d4aad948a44c36061b, type: 2}
   canonBody: {fileID: 100012}
@@ -445,7 +445,8 @@ MonoBehaviour:
   right: {fileID: 100008}
   smoke: {fileID: 100000, guid: 3cbb5178571ab6f488a9f380316a308a, type: 2}
   angleX: 0
-  ballList: []
+  ballList:
+  - {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
