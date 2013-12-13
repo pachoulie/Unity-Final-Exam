@@ -29,6 +29,7 @@ public class Star : MonoBehaviour {
 	
 	void OnTriggerEnter() {
 		GameObject	textPivot = GameObject.Find("Text Pivot");
+		GameObject	textBallNumber = GameObject.Find("Text Balls Number");
 		GameObject	clearedLevelPlane = GameObject.Find("Plane");
 		
 		Debug.Log("Level finished !");
@@ -36,6 +37,8 @@ public class Star : MonoBehaviour {
 			clearedLevelPlane.animation.Play();
 		if (textPivot != null)
 			textPivot.SetActive(false);
+		if (textBallNumber != null)
+			textBallNumber.SetActive(false);
 		gameFinished = true;
 	}
 }
