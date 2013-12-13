@@ -444,6 +444,8 @@ MonoBehaviour:
   left: {fileID: 100004}
   right: {fileID: 100008}
   smoke: {fileID: 100000, guid: 3cbb5178571ab6f488a9f380316a308a, type: 2}
+  particleSystemBallDisappear: {fileID: 100000, guid: b39817583a92df54ebbab3f89f00ef4a,
+    type: 2}
   angleX: 0
   ballList: []
 --- !u!1001 &100100000

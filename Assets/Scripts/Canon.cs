@@ -15,6 +15,7 @@ public class Canon : MonoBehaviour {
 	public GameObject left;
 	public GameObject right;
 	public GameObject smoke;
+	public GameObject particleSystemBallDisappear;
 	
 	public float angleX;
 	
@@ -40,6 +41,7 @@ public class Canon : MonoBehaviour {
 			ballList.Add(nextBall);
 			if (ballList.Count > maximum_balls)
 			{
+				Instantiate(particleSystemBallDisappear, ballList[0].transform.position, Quaternion.identity);
 				ballList[0].transform.position = Vector3.down * 100;
 				GameObject ballToRemove = ballList[0];
 				ballList.RemoveAt(0);

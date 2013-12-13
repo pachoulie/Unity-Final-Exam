@@ -4243,7 +4243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   power: 15
-  minAngleLeftX: -180
+  minAngleLeftX: 180
   maxAngleRightX: 0
   maximum_balls: 4
   ballEmiter: {fileID: 377293296}
@@ -4252,9 +4252,10 @@ MonoBehaviour:
   left: {fileID: 107300994}
   right: {fileID: 538263806}
   smoke: {fileID: 100000, guid: 3cbb5178571ab6f488a9f380316a308a, type: 2}
+  particleSystemBallDisappear: {fileID: 100000, guid: b39817583a92df54ebbab3f89f00ef4a,
+    type: 2}
   angleX: 0
-  ballList:
-  - {fileID: 0}
+  ballList: []
 --- !u!1 &436891850
 GameObject:
   m_ObjectHideFlags: 0
@@ -4952,11 +4953,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: f173b24f4310c2849a6828ab36e9ebdf, type: 2}
       propertyPath: minAngleLeftX
-      value: -180
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 11100000, guid: f173b24f4310c2849a6828ab36e9ebdf, type: 2}
       propertyPath: m_PlayAutomatically
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: f173b24f4310c2849a6828ab36e9ebdf, type: 2}
+      propertyPath: maximum_balls
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f173b24f4310c2849a6828ab36e9ebdf, type: 2}
@@ -5324,7 +5329,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 837726567}
     m_Modifications:
     - target: {fileID: 400006, guid: dd4fc4d8920d14c48ab10dd4faf6d981, type: 2}
       propertyPath: m_LocalPosition.x
@@ -5813,7 +5818,7 @@ Transform:
   m_PrefabParentObject: {fileID: 400012, guid: f173b24f4310c2849a6828ab36e9ebdf, type: 2}
   m_PrefabInternal: {fileID: 491640464}
   m_GameObject: {fileID: 609367092}
-  m_LocalRotation: {x: -.707106829, y: 0, z: -0, w: .707106829}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: .216774359, y: 3.11980867, z: 2.57500005}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -8664,6 +8669,7 @@ Transform:
   - {fileID: 389991357}
   - {fileID: 199609170}
   - {fileID: 3075032}
+  - {fileID: 1719250533}
   - {fileID: 664770713}
   - {fileID: 521650592}
   - {fileID: 848161690}
@@ -18039,7 +18045,7 @@ Transform:
   m_Children:
   - {fileID: 639844905}
   - {fileID: 1082176044}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 837726567}
 --- !u!95 &1719250534
 Animator:
   m_ObjectHideFlags: 0
