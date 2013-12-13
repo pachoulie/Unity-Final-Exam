@@ -39,6 +39,7 @@ public class Star : MonoBehaviour {
 			textPivot.SetActive(false);
 		if (textBallNumber != null)
 			textBallNumber.SetActive(false);
+		animation.Play("Animation_Disappearing_Star");
 		gameFinished = true;
 	}
 }
