@@ -4255,8 +4255,7 @@ MonoBehaviour:
   particleSystemBallDisappear: {fileID: 100000, guid: b39817583a92df54ebbab3f89f00ef4a,
     type: 2}
   angleX: 0
-  ballList:
-  - {fileID: 0}
+  ballList: []
 --- !u!1 &436891850
 GameObject:
   m_ObjectHideFlags: 0
@@ -4924,6 +4923,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 837726567}
     m_Modifications:
+    - target: {fileID: 11400000, guid: f173b24f4310c2849a6828ab36e9ebdf, type: 2}
+      propertyPath: ballList.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: f173b24f4310c2849a6828ab36e9ebdf, type: 2}
       propertyPath: m_LocalPosition.x
       value: 2.21034431

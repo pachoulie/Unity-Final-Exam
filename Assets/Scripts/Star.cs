@@ -33,8 +33,12 @@ public class Star : MonoBehaviour {
 		GameObject	clearedLevelPlane = GameObject.Find("Plane");
 		
 		Debug.Log("Level finished !");
-		if (clearedLevelPlane != null)
+		if (clearedLevelPlane != null) {
+			if (!clearedLevelPlane.animation.isPlaying)
+				clearedLevelPlane.animation["Level_Cleard_Animation"].time = 0;
+			clearedLevelPlane.animation["Level_Cleard_Animation"].speed = 1;
 			clearedLevelPlane.animation.Play();
+		}
 		if (textPivot != null)
 			textPivot.SetActive(false);
 		if (textBallNumber != null)

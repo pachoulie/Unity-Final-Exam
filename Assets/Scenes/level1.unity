@@ -11882,6 +11882,10 @@ Prefab:
       propertyPath: m_Name
       value: Text Balls Number
       objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: dd4fc4d8920d14c48ab10dd4faf6d981, type: 2}
+      propertyPath: m_Name
+      value: BallIcon
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dd4fc4d8920d14c48ab10dd4faf6d981, type: 2}
   m_RootGameObject: {fileID: 405738452}
@@ -20730,7 +20734,7 @@ GameObject:
   - 23: {fileID: 1579350609}
   - 102: {fileID: 1579350608}
   m_Layer: 0
-  m_Name: Ball
+  m_Name: BallIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21164,6 +21168,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11400000, guid: f173b24f4310c2849a6828ab36e9ebdf, type: 2}
+      propertyPath: ballList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: f173b24f4310c2849a6828ab36e9ebdf, type: 2}
       propertyPath: m_LocalPosition.x
       value: -.679404795
