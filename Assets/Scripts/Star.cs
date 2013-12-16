@@ -24,14 +24,20 @@ public class Star : MonoBehaviour {
 				plane.animation.Play("Level_Cleard_Animation");
 				Application.LoadLevel (SceneName);
 			}
+		} else {
+			if (!plane.animation.isPlaying) {
+				Utility.SetAllTextActive(true);
+				Debug.Log ("ON");
+			} else {
+				Debug.Log ("OFF");
+				Utility.SetAllTextActive(false);
+			}
 		}
 	}
 	
 	void OnTriggerEnter() {
-		GameObject	textPivot = GameObject.Find("Text Pivot");
-		GameObject	textBallNumber = GameObject.Find("Text Balls Number");
-		GameObject	clearedLevelPlane = GameObject.Find("Plane");
-		
+		GameObject	 clearedLevelPlane = GameObject.Find("Plane");
+
 		Debug.Log("Level finished !");
 		if (clearedLevelPlane != null) {
 			if (!clearedLevelPlane.animation.isPlaying)
@@ -39,10 +45,8 @@ public class Star : MonoBehaviour {
 			clearedLevelPlane.animation["Level_Cleard_Animation"].speed = 1;
 			clearedLevelPlane.animation.Play();
 		}
-		if (textPivot != null)
-			textPivot.SetActive(false);
-		if (textBallNumber != null)
-			textBallNumber.SetActive(false);
+		
+		Utility.SetAllTextActive(false);
 		animation.Play("Animation_Disappearing_Star");
 		gameFinished = true;
 	}

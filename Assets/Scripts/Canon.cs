@@ -80,4 +80,22 @@ public class Canon : MonoBehaviour {
 			Instantiate(smoke, ballEmiter.transform.position, Quaternion.identity);
 		}
 	}
+	
+	void ResetAll()
+	{
+		int i = 0;
+		List<GameObject> destroyList = new List<GameObject>();
+		
+		while (i < ballList.Count) {
+			Instantiate(particleSystemBallDisappear, ballList[i].transform.position, Quaternion.identity);
+			ballList[i].transform.position = Vector3.down * 100;
+			destroyList.Add(ballList[i]);
+			++i;
+		}
+		ballList.RemoveAll( (ball) => { return true; } );
+		foreach (GameObject ball in destroyList)
+		{
+			Destroy(ball, 1);
+		}
+	}
 }

@@ -35,4 +35,15 @@ public static class Utility {
         v.x = (cos * tx) - (sin * ty);
         v.y = (cos * ty) + (sin * tx);
     }
+	
+	public static void SetAllTextActive(bool active)
+	{
+		GameObject[] text = GameObject.FindGameObjectsWithTag("Text");
+		
+		int i = 0;
+		while (i < text.Length) {
+			text[i].renderer.enabled = active;
+			++i;
+		}
+	}
 }
