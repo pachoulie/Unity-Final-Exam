@@ -1,8 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Crystal : MonoBehaviour {
+public class Crystal : MonoBehaviour, ITriggered {
+	
+	public GameObject trigger;
 
+	
 	// Use this for initialization
 	void Start () {
 	
@@ -13,11 +16,15 @@ public class Crystal : MonoBehaviour {
 		
 	}
 	
-	void OnCollisionEnter(Collision collision) {
-		Debug.Log(collision.gameObject.name);
+	public void OnTriggeredEnter () {
+		trigger.SendMessage("OnTriggeredEnter");
 	}
 	
-	void OnCollisionExit(Collision collision) {
-		
+	public void OnTriggeredStay () {
+		trigger.SendMessage("OnTriggeredStay");
+	}
+	
+	public void OnTriggeredExit () {
+		trigger.SendMessage("OnTriggeredExit");
 	}
 }
