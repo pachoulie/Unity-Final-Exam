@@ -31,7 +31,7 @@ public class LaserBeam : MonoBehaviour {
 		);
 		Debug.Log(hit.collider.name);
 		if (hit.collider.gameObject.layer == 8) // crystal
-		{
+		{			
 			if (wasColliding) {
 				crystal.SendMessage("OnTriggeredStay");
 			} else {

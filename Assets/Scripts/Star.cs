@@ -17,7 +17,7 @@ public class Star : MonoBehaviour {
 
 		if (gameFinished == true){
 			if (Input.GetKey(KeyCode.KeypadEnter) || Input.GetKey(KeyCode.Return)) {
-				if (!plane.animation.isPlaying)
+				if (plane && !plane.animation.isPlaying)
 					plane.animation["Level_Cleard_Animation"].time =
 						plane.animation["Level_Cleard_Animation"].length;
 				plane.animation["Level_Cleard_Animation"].speed = -1;
@@ -25,7 +25,7 @@ public class Star : MonoBehaviour {
 				Application.LoadLevel (SceneName);
 			}
 		} else {
-			if (!plane.animation.isPlaying) {
+			if (plane && !plane.animation.isPlaying) {
 				Utility.SetAllTextActive(true);
 				Debug.Log ("ON");
 			} else {
@@ -37,7 +37,11 @@ public class Star : MonoBehaviour {
 	
 	void OnTriggerEnter() {
 		GameObject	 clearedLevelPlane = GameObject.Find("Plane");
-
+		
+		GameObject cannon = GameObject.Find("Cannon");
+		
+		cannon.SendMessage("setGrade");
+		
 		Debug.Log("Level finished !");
 		if (clearedLevelPlane != null) {
 			if (!clearedLevelPlane.animation.isPlaying)

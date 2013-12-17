@@ -1153,7 +1153,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 2a1767a7ce696984f858c522267dc53b, type: 2}
+  - {fileID: 2100000, guid: 617e761855c6c8841942442d0f24517e, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -3403,7 +3403,7 @@ Prefab:
     - target: {fileID: 2300000, guid: c92c35b4c40bdad40ae2042371514bc4, type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 2a1767a7ce696984f858c522267dc53b, type: 2}
+      objectReference: {fileID: 2100000, guid: 617e761855c6c8841942442d0f24517e, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c92c35b4c40bdad40ae2042371514bc4, type: 2}
   m_RootGameObject: {fileID: 664770712}
@@ -4335,6 +4335,7 @@ MonoBehaviour:
   minAngleLeftX: 180
   maxAngleRightX: 0
   maximum_balls: 4
+  optimumBalls: 3
   ballEmiter: {fileID: 377293296}
   ball: {fileID: 100000, guid: d2c26a59206ea6d4aad948a44c36061b, type: 2}
   canonBody: {fileID: 609367092}
@@ -5167,6 +5168,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: aa615a688e192f940bcdaaaee2ee69de, type: 2}
+    - target: {fileID: 11400000, guid: f173b24f4310c2849a6828ab36e9ebdf, type: 2}
+      propertyPath: optimumBalls
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f173b24f4310c2849a6828ab36e9ebdf, type: 2}
   m_RootGameObject: {fileID: 389991356}
@@ -12512,6 +12517,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SceneName: level3
+  plane: {fileID: 100000, guid: 0ce01299979fe0449b587c0380da8fae, type: 2}
 --- !u!135 &1201999536
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -14031,7 +14037,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 2a1767a7ce696984f858c522267dc53b, type: 2}
+  - {fileID: 2100000, guid: 617e761855c6c8841942442d0f24517e, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -17103,7 +17109,7 @@ Prefab:
     - target: {fileID: 2300000, guid: c92c35b4c40bdad40ae2042371514bc4, type: 2}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 2a1767a7ce696984f858c522267dc53b, type: 2}
+      objectReference: {fileID: 2100000, guid: 617e761855c6c8841942442d0f24517e, type: 2}
     - target: {fileID: 100002, guid: c92c35b4c40bdad40ae2042371514bc4, type: 2}
       propertyPath: m_Name
       value: SlabWorldPivot
@@ -17622,6 +17628,10 @@ Prefab:
       propertyPath: m_LocalPosition.x
       value: .487587929
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 8afc9b2715761334c8045b64b59f90ea, type: 2}
+      propertyPath: plane
+      value: 
+      objectReference: {fileID: 100000, guid: 0ce01299979fe0449b587c0380da8fae, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8afc9b2715761334c8045b64b59f90ea, type: 2}
   m_RootGameObject: {fileID: 848161689}

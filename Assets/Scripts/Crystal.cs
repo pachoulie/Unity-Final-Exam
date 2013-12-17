@@ -18,6 +18,7 @@ public class Crystal : MonoBehaviour, ITriggered {
 	
 	public void OnTriggeredEnter () {
 		trigger.SendMessage("OnTriggeredEnter");
+		animation.Play ("Crystal_White_To_Red_Animation");
 	}
 	
 	public void OnTriggeredStay () {
@@ -26,5 +27,6 @@ public class Crystal : MonoBehaviour, ITriggered {
 	
 	public void OnTriggeredExit () {
 		trigger.SendMessage("OnTriggeredExit");
+		animation.Play ("Crystal_Red_To_White_Animation");
 	}
 }

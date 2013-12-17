@@ -8,6 +8,8 @@ public class Canon : MonoBehaviour {
 	public int minAngleLeftX;
 	public int maxAngleRightX;
 	public int maximum_balls;
+	public int optimumBalls;
+	int ballsCount;
 
 	public GameObject ballEmiter;
 	public GameObject ball;
@@ -28,6 +30,7 @@ public class Canon : MonoBehaviour {
 	void Start () {
 		fire = false;
 		incAngle = 0;
+		ballsCount = 0;
 	}
 	
 	// Update is called once per frame
@@ -47,6 +50,7 @@ public class Canon : MonoBehaviour {
 				ballList.RemoveAt(0);
 				Destroy(ballToRemove, 1);
 			}
+			ballsCount++;
 		}
 		angleX = canonBody.transform.localEulerAngles.z;
 		if (Input.GetKey(KeyCode.RightArrow)) {
@@ -84,6 +88,7 @@ public class Canon : MonoBehaviour {
 	void ResetAll()
 	{
 		int i = 0;
+		ballsCount = 0;
 		List<GameObject> destroyList = new List<GameObject>();
 		
 		while (i < ballList.Count) {
@@ -97,5 +102,17 @@ public class Canon : MonoBehaviour {
 		{
 			Destroy(ball, 1);
 		}
+	}
+	
+	public void setGrade(){
+		GameObject scoreTextObj = GameObject.Find("Text Stars");
+		TextMesh scoreText = (TextMesh)scoreTextObj.GetComponent("TextMesh");
+		
+		if (ballsCount <= optimumBalls)
+			scoreText.text = "* * *";
+		else if (ballsCount > optimumBalls && ballsCount <= optimumBalls*2)
+			scoreText.text = "* * _";
+		else
+			scoreText.text = "* _ _";
 	}
 }
