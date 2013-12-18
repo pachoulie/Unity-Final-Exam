@@ -42,6 +42,8 @@ public class Star : MonoBehaviour {
 		
 		cannon.SendMessage("setGrade");
 		
+		audio.Play();
+		
 		Debug.Log("Level finished !");
 		if (clearedLevelPlane != null) {
 			if (!clearedLevelPlane.animation.isPlaying)
