@@ -2,7 +2,9 @@
 using System.Collections;
 
 public class Door : MonoBehaviour, ITriggered {
-
+	
+	public string AnimationName;
+	
 	// Use this for initialization
 	void Start () {
 	
@@ -16,8 +18,8 @@ public class Door : MonoBehaviour, ITriggered {
 	public void OnTriggeredEnter () {
 		Debug.Log ("Enter !");
 		//animation["test_ouverture_porte_trigger_level1"].time = 0;
-		animation["door_opening"].speed = 1;
-		animation.Play("door_opening");
+		animation[AnimationName].speed = 1;
+		animation.Play(AnimationName);
 	}
 	
 	public void OnTriggeredStay () {
@@ -27,8 +29,8 @@ public class Door : MonoBehaviour, ITriggered {
 	public void OnTriggeredExit () {
 		Debug.Log ("Exit !");
 		if (!animation.isPlaying)
-			animation["door_opening"].time = animation["door_opening"].length;
-		animation["door_opening"].speed = -1;
-		animation.Play("door_opening");
+			animation[AnimationName].time = animation[AnimationName].length;
+		animation[AnimationName].speed = -1;
+		animation.Play(AnimationName);
 	}
 }

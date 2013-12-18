@@ -5,7 +5,7 @@ AnimationClip:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: door_opening
+  m_Name: Door_opening_0.5
   serializedVersion: 3
   m_AnimationType: 1
   m_Compressed: 0
@@ -16,14 +16,14 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: {x: 0, y: 0, z: 0}
-        inSlope: {x: 0, y: .480000019, z: 0}
-        outSlope: {x: 0, y: .480000019, z: 0}
+        value: {x: 0, y: .00284567592, z: 0}
+        inSlope: {x: 0, y: .298292607, z: 0}
+        outSlope: {x: 0, y: .298292607, z: 0}
         tangentMode: -559038737
       - time: 1.66666663
-        value: {x: 0, y: .800000012, z: 0}
-        inSlope: {x: 0, y: .480000019, z: 0}
-        outSlope: {x: 0, y: .480000019, z: 0}
+        value: {x: 0, y: .5, z: 0}
+        inSlope: {x: 0, y: .298292607, z: 0}
+        outSlope: {x: 0, y: .298292607, z: 0}
         tangentMode: -559038737
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -31,7 +31,7 @@ AnimationClip:
   m_ScaleCurves: []
   m_FloatCurves: []
   m_SampleRate: 60
-  m_WrapMode: 1
+  m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
@@ -66,7 +66,7 @@ AnimationClip:
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
-    attribute: m_LocalPosition.z
+    attribute: m_LocalPosition.x
     path: 
     classID: 4
     script: {fileID: 0}
@@ -74,14 +74,14 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: 0
-        inSlope: .480000019
-        outSlope: .480000019
+        value: .00284567592
+        inSlope: .298292607
+        outSlope: .298292607
         tangentMode: 10
       - time: 1.66666663
-        value: .800000012
-        inSlope: .480000019
-        outSlope: .480000019
+        value: .5
+        inSlope: .298292607
+        outSlope: .298292607
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -104,7 +104,7 @@ AnimationClip:
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
-    attribute: m_LocalPosition.x
+    attribute: m_LocalPosition.z
     path: 
     classID: 4
     script: {fileID: 0}
