@@ -19,6 +19,7 @@ public class Slab : MonoBehaviour {
 	}
 	
 	void OnTriggerEnter (Collider collider) {
+		audio.Play();
 		if (ballInContact == 0) {
 			trigger.SendMessage("OnTriggeredEnter");
 			animation["slab_pressure"].speed = 1;

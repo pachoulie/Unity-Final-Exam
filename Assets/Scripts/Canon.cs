@@ -78,6 +78,7 @@ public class Canon : MonoBehaviour {
 		}
 		if (Input.GetKeyDown(KeyCode.Space)) {
 			fire = true;
+			audio.Play(22050);
 			canonBody.animation.Play();
 			left.animation.Play();
 			right.animation.Play();
