@@ -4082,6 +4082,7 @@ GameObject:
   - 4: {fileID: 178476424}
   - 114: {fileID: 178476426}
   - 114: {fileID: 178476425}
+  - 82: {fileID: 178476427}
   m_Layer: 0
   m_Name: Level_Cleared
   m_TagString: Untagged
@@ -4124,6 +4125,64 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6382870d1dd0b1548a03951c30d63513, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &178476427
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 178476423}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: 169943b2f84c0da47b5000a8952c2f11, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1001 &190413983
 Prefab:
   m_ObjectHideFlags: 0
@@ -26000,6 +26059,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57f660bacc865dd4f9fef00cdd3c28e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AnimationName: door_opening
 --- !u!111 &1876815234
 Animation:
   m_ObjectHideFlags: 0

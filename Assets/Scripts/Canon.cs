@@ -54,23 +54,23 @@ public class Canon : MonoBehaviour {
 		}
 		angleX = canonBody.transform.localEulerAngles.z;
 		if (Input.GetKey(KeyCode.RightArrow)) {
+			if (incAngle <= 3)
+				incAngle += 0.1f;
 			float cmp = angleX + incAngle;
 			if (cmp > 180) {
 				cmp -= 360;
 			}
 			if ( cmp < maxAngleRightX ) {
-				if (incAngle <= 3)
-					incAngle += 0.1f;
 				canonBody.transform.RotateAround(canonBody.transform.position, new Vector3(1, 0, 0), incAngle);
 			}
 		} else if (Input.GetKey(KeyCode.LeftArrow)) {
+			if (incAngle <= 3)
+				incAngle += 0.1f;
 			float cmp = angleX - incAngle;
 			if (cmp <= 0.1) {
 				cmp += 360;
 			}
 			if ( cmp > minAngleLeftX ) {
-				if (incAngle <= 3)
-					incAngle += 0.1f;
 				canonBody.transform.RotateAround(canonBody.transform.position, new Vector3(1, 0, 0), -incAngle);
 			}
 		} else {
