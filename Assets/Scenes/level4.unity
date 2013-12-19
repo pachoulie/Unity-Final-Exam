@@ -4402,7 +4402,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 2a1767a7ce696984f858c522267dc53b, type: 2}
+  - {fileID: 2100000, guid: 617e761855c6c8841942442d0f24517e, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -6184,6 +6184,14 @@ Prefab:
       propertyPath: trigger
       value: 
       objectReference: {fileID: 1640910321}
+    - target: {fileID: 2300000, guid: c92c35b4c40bdad40ae2042371514bc4, type: 2}
+      propertyPath: m_UseLightProbes
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: c92c35b4c40bdad40ae2042371514bc4, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 617e761855c6c8841942442d0f24517e, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c92c35b4c40bdad40ae2042371514bc4, type: 2}
   m_RootGameObject: {fileID: 2145168491}
@@ -7807,7 +7815,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 2a1767a7ce696984f858c522267dc53b, type: 2}
+  - {fileID: 2100000, guid: 617e761855c6c8841942442d0f24517e, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -15875,6 +15883,7 @@ GameObject:
   - 111: {fileID: 1617937516}
   - 114: {fileID: 1617937515}
   - 135: {fileID: 1617937514}
+  - 82: {fileID: 1617937520}
   m_Layer: 0
   m_Name: Star
   m_TagString: Untagged
@@ -15979,6 +15988,65 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1748327131}
   m_GameObject: {fileID: 1617937512}
   m_Mesh: {fileID: 4300000, guid: 4bdb1b732d2c29b4b8de0156804a1abb, type: 3}
+--- !u!82 &1617937520
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 8200000, guid: 8afc9b2715761334c8045b64b59f90ea,
+    type: 2}
+  m_PrefabInternal: {fileID: 1748327131}
+  m_GameObject: {fileID: 1617937512}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 8300000, guid: fa66024e9f063314f8b33724f10f74de, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1001 &1632692294
 Prefab:
   m_ObjectHideFlags: 0
@@ -16066,6 +16134,10 @@ Prefab:
       propertyPath: trigger
       value: 
       objectReference: {fileID: 656573431}
+    - target: {fileID: 2300000, guid: c92c35b4c40bdad40ae2042371514bc4, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 617e761855c6c8841942442d0f24517e, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c92c35b4c40bdad40ae2042371514bc4, type: 2}
   m_RootGameObject: {fileID: 1556891867}
@@ -16707,7 +16779,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 2a1767a7ce696984f858c522267dc53b, type: 2}
+  - {fileID: 2100000, guid: 617e761855c6c8841942442d0f24517e, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -18125,6 +18197,10 @@ Prefab:
       propertyPath: trigger
       value: 
       objectReference: {fileID: 434022711}
+    - target: {fileID: 2300000, guid: c92c35b4c40bdad40ae2042371514bc4, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 617e761855c6c8841942442d0f24517e, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c92c35b4c40bdad40ae2042371514bc4, type: 2}
   m_RootGameObject: {fileID: 982602845}
