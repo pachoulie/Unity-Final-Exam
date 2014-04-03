@@ -1,0 +1,29 @@
+HIERARCHY
+ROOT Hips
+{
+	OFFSET 0 0 0 
+	CHANNELS 6 Xposition Yposition Zposition Zrotation Xrotation Yrotation
+	JOINT J1
+	{
+		OFFSET 1.421 2.22045e-016 5.55112e-017 
+		CHANNELS 3 Zrotation Xrotation Yrotation
+		JOINT J2
+		{
+			OFFSET 0.233391 -1.52078 -0.813312 
+			CHANNELS 3 Zrotation Xrotation Yrotation
+			JOINT J3
+			{
+				OFFSET 1.31702 1.1482 0.345421 
+				CHANNELS 3 Zrotation Xrotation Yrotation
+				End Site J4
+				{
+					OFFSET 0 0 0 
+				}
+			}
+		}
+	}
+}
+MOTION
+Frames: 1
+Frame Time: 0.016666
+0.513654 6.35121 -3.67203 -159.41 -84.0277 -67.6144 -0 0 -0 -0 0 -0 -0 0 -0 

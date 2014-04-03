@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="FrameWork">
+</Property><Property Name="Solution File" Value="C:\Users\KMU\Downloads\Origin\FrameWork\FrameWork.sln">
+</Property><Property Name="Date" Value="2014년 3월 13일 목요일">
+</Property><Property Name="Time" Value="오전 10:01">
+</Property></Properties><Event ErrorLevel="0" Project="FrameWork" Source="FrameWork.vcproj" Description="Converting project file 'C:\Users\KMU\Downloads\Origin\FrameWork\FrameWork.vcproj'.">
+</Event><Event ErrorLevel="1" Project="FrameWork" Source="FrameWork.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="1" Project="FrameWork" Source="FrameWork.vcproj" Description="Attribute 'Detect64BitPortabilityProblems' of 'VCCLCompilerTool' is not supported in this version and has been removed during conversion.">
+</Event><Event ErrorLevel="1" Project="FrameWork" Source="FrameWork.vcproj" Description="Attribute 'Detect64BitPortabilityProblems' of 'VCCLCompilerTool' is not supported in this version and has been removed during conversion.">
+</Event><Event ErrorLevel="0" Project="FrameWork" Source="FrameWork.vcproj" Description="Done converting to new project file 'C:\Users\KMU\Downloads\Origin\FrameWork\FrameWork.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="FrameWork" Source="FrameWork.vcproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="FrameWork.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="FrameWork.sln" Description="Converted">
+</Event></UpgradeLog>
