@@ -1,8 +1,0 @@
-/Temp
-/obj
-/library
-*.csproj
-*.unityproj
-*.sln
-/*.pidb
-/*.userprefs
