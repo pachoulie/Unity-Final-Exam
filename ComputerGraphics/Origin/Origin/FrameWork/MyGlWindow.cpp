@@ -22,7 +22,9 @@ static double DEFAULT_VIEW_POINT[3] = {30, 30, 30};
 static double DEFAULT_VIEW_CENTER[3] = {0, 0, 0};
 static double DEFAULT_UP_VECTOR[3] = {0, 1, 0};
 
-unsigned int rand(int seed = 32165498)
+#define MY_MAX_RAND (281474976710656L - 1)
+
+unsigned int myrand(int seed = 32165498)
 {
     static unsigned int x = seed;
 
@@ -53,6 +55,8 @@ MyGlWindow::MyGlWindow(int x, int y, int w, int h) :
         p.timeAlive = 0;
         p.lifespan  = 5;
     });
+    m_range = 0;
+    m_direction = 0;
 }
 
   void MyGlWindow::setupLight()
@@ -171,7 +175,21 @@ int MyGlWindow::loadply()
 
 void MyGlWindow::drawStuff()
 {
+    static int lastReset = 0;
 
+    glColor4d(0.9, 0.9, 0, 0.5);
+    drawCube(10, 10, 10);
+
+    m_particleList.at(lastReset).pos = Vec3f(0, 10, 0);
+    m_particleList.at(lastReset).velocity = Vec3f(0, 1, 1) + Vec3f(myrand() / MY_MAX_RAND * m_range * (myrand() > MY_MAX_RAND / 2 ? 1 : -1),
+                                                                   myrand() / MY_MAX_RAND * m_range * (myrand() > MY_MAX_RAND / 2 ? 1 : -1),
+                                                                   myrand() / MY_MAX_RAND * m_range * (myrand() > MY_MAX_RAND / 2 ? 1 : -1));
+
+    std::for_each(m_particleList.begin(), m_particleList.end(), [&] (Particle &e) {
+        glPushMatrix();
+        glTranslated(e.pos.x(), e.pos.y(), e.pos.z());
+        glPopMatrix();
+    });
 }
 
 //==========================================================================
@@ -217,14 +235,15 @@ void MyGlWindow::draw()
   glVertex3f(0,0,0);
   glVertex3f(0,0,100);
   glEnd();
-
-
- 
- 
+  
 
   setupShadows();
   drawStuff();
   unsetupShadows();
+
+  // Enable blending
+  glEnable(GL_BLEND);
+  glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
   drawStuff();
 

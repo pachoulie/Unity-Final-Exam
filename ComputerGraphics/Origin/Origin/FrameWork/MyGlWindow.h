@@ -15,7 +15,7 @@
 
 #include "Vec3f.h"
 #include "Viewer.h"
-#include <vector>
+#include <deque>
 
 
 #include "BVH.h"
@@ -46,7 +46,9 @@ class MyGlWindow : public Fl_Gl_Window {
         void drawStuff();
         
     private:
-        std::list<Particle> m_particleList;
+        std::deque<Particle> m_particleList;
+        float                m_direction;
+        float                m_range;
 
         void draw();					// standard FlTk
         
